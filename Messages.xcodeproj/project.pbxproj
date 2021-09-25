@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A51449726FF23700094E4DC /* NetworkSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A51449626FF23700094E4DC /* NetworkSessionProvider.swift */; };
+		0A51449926FF23E60094E4DC /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A51449826FF23E60094E4DC /* NetworkLogger.swift */; };
+		0A51449B26FF24950094E4DC /* Network+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A51449A26FF24950094E4DC /* Network+Protocols.swift */; };
+		0A51449D26FF24FC0094E4DC /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A51449C26FF24FC0094E4DC /* Server.swift */; };
+		0A51449F26FF26420094E4DC /* Network+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A51449E26FF26420094E4DC /* Network+Enums.swift */; };
 		0AC986BB26FF133B00016CE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC986BA26FF133B00016CE9 /* AppDelegate.m */; };
 		0AC986BE26FF133B00016CE9 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC986BD26FF133B00016CE9 /* SceneDelegate.m */; };
 		0AC986C126FF133B00016CE9 /* MessagesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC986C026FF133B00016CE9 /* MessagesListViewController.m */; };
@@ -17,9 +22,20 @@
 		0AC986E226FF199D00016CE9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC986E126FF199D00016CE9 /* Message.swift */; };
 		0AC986E426FF1A0200016CE9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC986E326FF1A0200016CE9 /* User.swift */; };
 		0AC986E626FF1AA900016CE9 /* MessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC986E526FF1AA900016CE9 /* MessageItem.swift */; };
+		0AC986E926FF1DED00016CE9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC986E826FF1DED00016CE9 /* Configuration.swift */; };
+		0AC986EC26FF1E7400016CE9 /* MessagesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC986EB26FF1E7400016CE9 /* MessagesEndpoint.swift */; };
+		0AC986EE26FF1ED700016CE9 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC986ED26FF1ED700016CE9 /* HttpMethod.swift */; };
+		0AC986F026FF1FB900016CE9 /* MessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC986EF26FF1FB900016CE9 /* MessagesManager.swift */; };
+		D878F43B3D923BA4B1331717 /* Pods_Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 793104D0E66BEBD68D2FC4F1 /* Pods_Messages.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A51449626FF23700094E4DC /* NetworkSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionProvider.swift; sourceTree = "<group>"; };
+		0A51449826FF23E60094E4DC /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		0A51449A26FF24950094E4DC /* Network+Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Protocols.swift"; sourceTree = "<group>"; };
+		0A51449C26FF24FC0094E4DC /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		0A51449E26FF26420094E4DC /* Network+Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Enums.swift"; sourceTree = "<group>"; };
+		0A5144A026FF306D0094E4DC /* Messages-Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Messages-Swift.h"; sourceTree = "<group>"; };
 		0AC986B626FF133B00016CE9 /* Messages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC986B926FF133B00016CE9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0AC986BA26FF133B00016CE9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,7 +52,13 @@
 		0AC986E126FF199D00016CE9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		0AC986E326FF1A0200016CE9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0AC986E526FF1AA900016CE9 /* MessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageItem.swift; sourceTree = "<group>"; };
-		0AC986E726FF1BB300016CE9 /* Messages-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Messages-Bridging-Header.h"; sourceTree = "<group>"; };
+		0AC986E826FF1DED00016CE9 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		0AC986EB26FF1E7400016CE9 /* MessagesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesEndpoint.swift; sourceTree = "<group>"; };
+		0AC986ED26FF1ED700016CE9 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		0AC986EF26FF1FB900016CE9 /* MessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesManager.swift; sourceTree = "<group>"; };
+		63DFF2EC9DBA944BADD92D0C /* Pods-Messages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messages.debug.xcconfig"; path = "Target Support Files/Pods-Messages/Pods-Messages.debug.xcconfig"; sourceTree = "<group>"; };
+		793104D0E66BEBD68D2FC4F1 /* Pods_Messages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E77C1CD02F2FBFBAA1C7E513 /* Pods-Messages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messages.release.xcconfig"; path = "Target Support Files/Pods-Messages/Pods-Messages.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D878F43B3D923BA4B1331717 /* Pods_Messages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +78,8 @@
 			children = (
 				0AC986B826FF133B00016CE9 /* Messages */,
 				0AC986B726FF133B00016CE9 /* Products */,
+				AF5AD7EC7FA5D045BE012521 /* Pods */,
+				7847E38ED3B79423C0CE9E99 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,7 +100,7 @@
 				0AC986D226FF137500016CE9 /* Resources */,
 				0AC986C726FF133C00016CE9 /* LaunchScreen.storyboard */,
 				0AC986CB26FF133C00016CE9 /* main.m */,
-				0AC986E726FF1BB300016CE9 /* Messages-Bridging-Header.h */,
+				0A5144A026FF306D0094E4DC /* Messages-Swift.h */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -92,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				0AC986CA26FF133C00016CE9 /* Info.plist */,
+				0AC986E826FF1DED00016CE9 /* Configuration.swift */,
 			);
 			path = Environments;
 			sourceTree = "<group>";
@@ -99,6 +125,7 @@
 		0AC986D426FF142400016CE9 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				0AC986EA26FF1E5500016CE9 /* Network */,
 				0AC986DF26FF198A00016CE9 /* Models */,
 				0AC986D526FF143000016CE9 /* Flow */,
 				0AC986B926FF133B00016CE9 /* AppDelegate.h */,
@@ -139,6 +166,12 @@
 		0AC986D826FF147100016CE9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				0AC986ED26FF1ED700016CE9 /* HttpMethod.swift */,
+				0A51449626FF23700094E4DC /* NetworkSessionProvider.swift */,
+				0A51449826FF23E60094E4DC /* NetworkLogger.swift */,
+				0A51449A26FF24950094E4DC /* Network+Protocols.swift */,
+				0A51449C26FF24FC0094E4DC /* Server.swift */,
+				0A51449E26FF26420094E4DC /* Network+Enums.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -153,6 +186,32 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		0AC986EA26FF1E5500016CE9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0AC986EB26FF1E7400016CE9 /* MessagesEndpoint.swift */,
+				0AC986EF26FF1FB900016CE9 /* MessagesManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		7847E38ED3B79423C0CE9E99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				793104D0E66BEBD68D2FC4F1 /* Pods_Messages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF5AD7EC7FA5D045BE012521 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				63DFF2EC9DBA944BADD92D0C /* Pods-Messages.debug.xcconfig */,
+				E77C1CD02F2FBFBAA1C7E513 /* Pods-Messages.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,9 +219,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AC986CF26FF133C00016CE9 /* Build configuration list for PBXNativeTarget "Messages" */;
 			buildPhases = (
+				FBBEFA49EE207B5BDA0002CE /* [CP] Check Pods Manifest.lock */,
 				0AC986B226FF133B00016CE9 /* Sources */,
 				0AC986B326FF133B00016CE9 /* Frameworks */,
 				0AC986B426FF133B00016CE9 /* Resources */,
+				3ACEA0056B622A9C0B1A2352 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,19 +279,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3ACEA0056B622A9C0B1A2352 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Messages/Pods-Messages-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Messages/Pods-Messages-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Messages/Pods-Messages-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBBEFA49EE207B5BDA0002CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Messages-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0AC986B226FF133B00016CE9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A51449926FF23E60094E4DC /* NetworkLogger.swift in Sources */,
 				0AC986E626FF1AA900016CE9 /* MessageItem.swift in Sources */,
 				0AC986C126FF133B00016CE9 /* MessagesListViewController.m in Sources */,
+				0A51449726FF23700094E4DC /* NetworkSessionProvider.swift in Sources */,
 				0AC986BB26FF133B00016CE9 /* AppDelegate.m in Sources */,
+				0AC986E926FF1DED00016CE9 /* Configuration.swift in Sources */,
+				0AC986EE26FF1ED700016CE9 /* HttpMethod.swift in Sources */,
+				0AC986EC26FF1E7400016CE9 /* MessagesEndpoint.swift in Sources */,
+				0A51449B26FF24950094E4DC /* Network+Protocols.swift in Sources */,
 				0AC986DE26FF17BB00016CE9 /* MessageListPresenter.m in Sources */,
 				0AC986E226FF199D00016CE9 /* Message.swift in Sources */,
 				0AC986CC26FF133C00016CE9 /* main.m in Sources */,
 				0AC986BE26FF133B00016CE9 /* SceneDelegate.m in Sources */,
 				0AC986E426FF1A0200016CE9 /* User.swift in Sources */,
+				0A51449D26FF24FC0094E4DC /* Server.swift in Sources */,
+				0AC986F026FF1FB900016CE9 /* MessagesManager.swift in Sources */,
+				0A51449F26FF26420094E4DC /* Network+Enums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +474,7 @@
 		};
 		0AC986D026FF133C00016CE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63DFF2EC9DBA944BADD92D0C /* Pods-Messages.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -384,7 +497,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.davdima.Messages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Messages/Messages-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Messages/Messages-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -393,6 +506,7 @@
 		};
 		0AC986D126FF133C00016CE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E77C1CD02F2FBFBAA1C7E513 /* Pods-Messages.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -415,7 +529,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.davdima.Messages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Messages/Messages-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Messages/Messages-Swift.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
