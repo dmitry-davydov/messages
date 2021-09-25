@@ -6,6 +6,7 @@
 //
 
 #import "SceneDelegate.h"
+#import "MessagesListViewController.h"
 
 @interface SceneDelegate ()
 
@@ -15,9 +16,15 @@
 
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
-    // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-    // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-    // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    CGRect frame = [UIScreen mainScreen].bounds;
+    self.window = [[UIWindow alloc] initWithFrame:frame];
+    [self.window makeKeyAndVisible];
+    
+    MessagesListViewController *rootViewController = [[MessagesListViewController alloc] init];
+    self.window.rootViewController = rootViewController;
+    
+    UIWindowScene *windowScene = (UIWindowScene *) scene;
+    [self.window setWindowScene: windowScene];
 }
 
 

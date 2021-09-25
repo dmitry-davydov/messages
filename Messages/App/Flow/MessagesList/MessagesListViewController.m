@@ -1,21 +1,22 @@
 //
-//  ViewController.m
+//  MessagesListViewController.m
 //  Messages
 //
 //  Created by Дима Давыдов on 25.09.2021.
 //
 
-#import "ViewController.h"
+#import "MessagesListViewController.h"
 
-@interface ViewController ()
+@interface MessagesListViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MessagesListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSLog(@"Done");
 }
 
 
