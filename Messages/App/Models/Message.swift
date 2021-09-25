@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Message: Codable {
+@objc class Message: NSObject, Codable {
     
-    let text: String
-    let receivedAt: Date
+    @objc let text: String
+    @objc let receivedAt: Date
     
     enum CodingKeys: String, CodingKey {
         case text

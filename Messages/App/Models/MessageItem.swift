@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MessageItem: Codable {
-    let user: User
-    let message: Message
+@objc class MessageItem: NSObject, Codable {
+    @objc let user: User
+    @objc let message: Message
 }

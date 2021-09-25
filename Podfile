@@ -7,4 +7,5 @@ target 'Messages' do
 
   # Pods for Messages
   pod 'Alamofire', '~> 5.4'
+  pod 'SDWebImage', '~> 5.0'
 end

@@ -12,9 +12,11 @@
 		0A51449B26FF24950094E4DC /* Network+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A51449A26FF24950094E4DC /* Network+Protocols.swift */; };
 		0A51449D26FF24FC0094E4DC /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A51449C26FF24FC0094E4DC /* Server.swift */; };
 		0A51449F26FF26420094E4DC /* Network+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A51449E26FF26420094E4DC /* Network+Enums.swift */; };
+		0A5144A826FF70A70094E4DC /* MessageListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5144A626FF70A70094E4DC /* MessageListTableViewCell.m */; };
+		0A5144A926FF70A70094E4DC /* MessageListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5144A726FF70A70094E4DC /* MessageListTableViewCell.xib */; };
 		0AC986BB26FF133B00016CE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC986BA26FF133B00016CE9 /* AppDelegate.m */; };
 		0AC986BE26FF133B00016CE9 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC986BD26FF133B00016CE9 /* SceneDelegate.m */; };
-		0AC986C126FF133B00016CE9 /* MessagesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC986C026FF133B00016CE9 /* MessagesListViewController.m */; };
+		0AC986C126FF133B00016CE9 /* MessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC986C026FF133B00016CE9 /* MessageListViewController.m */; };
 		0AC986C626FF133C00016CE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC986C526FF133C00016CE9 /* Assets.xcassets */; };
 		0AC986C926FF133C00016CE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC986C726FF133C00016CE9 /* LaunchScreen.storyboard */; };
 		0AC986CC26FF133C00016CE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC986CB26FF133C00016CE9 /* main.m */; };
@@ -24,8 +26,8 @@
 		0AC986E626FF1AA900016CE9 /* MessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC986E526FF1AA900016CE9 /* MessageItem.swift */; };
 		0AC986E926FF1DED00016CE9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC986E826FF1DED00016CE9 /* Configuration.swift */; };
 		0AC986EC26FF1E7400016CE9 /* MessagesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC986EB26FF1E7400016CE9 /* MessagesEndpoint.swift */; };
-		0AC986EE26FF1ED700016CE9 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC986ED26FF1ED700016CE9 /* HttpMethod.swift */; };
 		0AC986F026FF1FB900016CE9 /* MessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC986EF26FF1FB900016CE9 /* MessagesManager.swift */; };
+		0AFC5CCD26FF810B00D80906 /* MessageListAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC5CCC26FF810B00D80906 /* MessageListAssembly.m */; };
 		D878F43B3D923BA4B1331717 /* Pods_Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 793104D0E66BEBD68D2FC4F1 /* Pods_Messages.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,14 +37,17 @@
 		0A51449A26FF24950094E4DC /* Network+Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Protocols.swift"; sourceTree = "<group>"; };
 		0A51449C26FF24FC0094E4DC /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		0A51449E26FF26420094E4DC /* Network+Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Enums.swift"; sourceTree = "<group>"; };
-		0A5144A026FF306D0094E4DC /* Messages-Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Messages-Swift.h"; sourceTree = "<group>"; };
+		0A5144A426FF54910094E4DC /* Messages-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Messages-Bridging-Header.h"; sourceTree = "<group>"; };
+		0A5144A526FF70A70094E4DC /* MessageListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageListTableViewCell.h; sourceTree = "<group>"; };
+		0A5144A626FF70A70094E4DC /* MessageListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageListTableViewCell.m; sourceTree = "<group>"; };
+		0A5144A726FF70A70094E4DC /* MessageListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageListTableViewCell.xib; sourceTree = "<group>"; };
 		0AC986B626FF133B00016CE9 /* Messages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC986B926FF133B00016CE9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0AC986BA26FF133B00016CE9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0AC986BC26FF133B00016CE9 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		0AC986BD26FF133B00016CE9 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		0AC986BF26FF133B00016CE9 /* MessagesListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagesListViewController.h; sourceTree = "<group>"; };
-		0AC986C026FF133B00016CE9 /* MessagesListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagesListViewController.m; sourceTree = "<group>"; };
+		0AC986BF26FF133B00016CE9 /* MessageListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageListViewController.h; sourceTree = "<group>"; };
+		0AC986C026FF133B00016CE9 /* MessageListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageListViewController.m; sourceTree = "<group>"; };
 		0AC986C526FF133C00016CE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AC986C826FF133C00016CE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AC986CA26FF133C00016CE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,8 +59,9 @@
 		0AC986E526FF1AA900016CE9 /* MessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageItem.swift; sourceTree = "<group>"; };
 		0AC986E826FF1DED00016CE9 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		0AC986EB26FF1E7400016CE9 /* MessagesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesEndpoint.swift; sourceTree = "<group>"; };
-		0AC986ED26FF1ED700016CE9 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		0AC986EF26FF1FB900016CE9 /* MessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesManager.swift; sourceTree = "<group>"; };
+		0AFC5CCB26FF810B00D80906 /* MessageListAssembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageListAssembly.h; sourceTree = "<group>"; };
+		0AFC5CCC26FF810B00D80906 /* MessageListAssembly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageListAssembly.m; sourceTree = "<group>"; };
 		63DFF2EC9DBA944BADD92D0C /* Pods-Messages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messages.debug.xcconfig"; path = "Target Support Files/Pods-Messages/Pods-Messages.debug.xcconfig"; sourceTree = "<group>"; };
 		793104D0E66BEBD68D2FC4F1 /* Pods_Messages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77C1CD02F2FBFBAA1C7E513 /* Pods-Messages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messages.release.xcconfig"; path = "Target Support Files/Pods-Messages/Pods-Messages.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A5144A126FF54210094E4DC /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				0AC986C726FF133C00016CE9 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		0AC986AD26FF133B00016CE9 = {
 			isa = PBXGroup;
 			children = (
@@ -94,13 +108,13 @@
 		0AC986B826FF133B00016CE9 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				0A5144A126FF54210094E4DC /* Support */,
 				0AC986D726FF145B00016CE9 /* Core */,
 				0AC986D426FF142400016CE9 /* App */,
 				0AC986D326FF13EB00016CE9 /* Environments */,
 				0AC986D226FF137500016CE9 /* Resources */,
-				0AC986C726FF133C00016CE9 /* LaunchScreen.storyboard */,
 				0AC986CB26FF133C00016CE9 /* main.m */,
-				0A5144A026FF306D0094E4DC /* Messages-Swift.h */,
+				0A5144A426FF54910094E4DC /* Messages-Bridging-Header.h */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -147,10 +161,15 @@
 		0AC986D626FF143B00016CE9 /* MessagesList */ = {
 			isa = PBXGroup;
 			children = (
-				0AC986BF26FF133B00016CE9 /* MessagesListViewController.h */,
-				0AC986C026FF133B00016CE9 /* MessagesListViewController.m */,
+				0AC986BF26FF133B00016CE9 /* MessageListViewController.h */,
+				0AC986C026FF133B00016CE9 /* MessageListViewController.m */,
 				0AC986DC26FF17BB00016CE9 /* MessageListPresenter.h */,
 				0AC986DD26FF17BB00016CE9 /* MessageListPresenter.m */,
+				0A5144A526FF70A70094E4DC /* MessageListTableViewCell.h */,
+				0A5144A626FF70A70094E4DC /* MessageListTableViewCell.m */,
+				0A5144A726FF70A70094E4DC /* MessageListTableViewCell.xib */,
+				0AFC5CCB26FF810B00D80906 /* MessageListAssembly.h */,
+				0AFC5CCC26FF810B00D80906 /* MessageListAssembly.m */,
 			);
 			path = MessagesList;
 			sourceTree = "<group>";
@@ -166,7 +185,6 @@
 		0AC986D826FF147100016CE9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				0AC986ED26FF1ED700016CE9 /* HttpMethod.swift */,
 				0A51449626FF23700094E4DC /* NetworkSessionProvider.swift */,
 				0A51449826FF23E60094E4DC /* NetworkLogger.swift */,
 				0A51449A26FF24950094E4DC /* Network+Protocols.swift */,
@@ -273,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AC986C926FF133C00016CE9 /* LaunchScreen.storyboard in Resources */,
+				0A5144A926FF70A70094E4DC /* MessageListTableViewCell.xib in Resources */,
 				0AC986C626FF133C00016CE9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,13 +345,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5144A826FF70A70094E4DC /* MessageListTableViewCell.m in Sources */,
 				0A51449926FF23E60094E4DC /* NetworkLogger.swift in Sources */,
 				0AC986E626FF1AA900016CE9 /* MessageItem.swift in Sources */,
-				0AC986C126FF133B00016CE9 /* MessagesListViewController.m in Sources */,
+				0AC986C126FF133B00016CE9 /* MessageListViewController.m in Sources */,
 				0A51449726FF23700094E4DC /* NetworkSessionProvider.swift in Sources */,
 				0AC986BB26FF133B00016CE9 /* AppDelegate.m in Sources */,
 				0AC986E926FF1DED00016CE9 /* Configuration.swift in Sources */,
-				0AC986EE26FF1ED700016CE9 /* HttpMethod.swift in Sources */,
 				0AC986EC26FF1E7400016CE9 /* MessagesEndpoint.swift in Sources */,
 				0A51449B26FF24950094E4DC /* Network+Protocols.swift in Sources */,
 				0AC986DE26FF17BB00016CE9 /* MessageListPresenter.m in Sources */,
@@ -343,6 +362,7 @@
 				0A51449D26FF24FC0094E4DC /* Server.swift in Sources */,
 				0AC986F026FF1FB900016CE9 /* MessagesManager.swift in Sources */,
 				0A51449F26FF26420094E4DC /* Network+Enums.swift in Sources */,
+				0AFC5CCD26FF810B00D80906 /* MessageListAssembly.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,7 +517,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.davdima.Messages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Messages/Messages-Swift.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Messages/Messages-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Messages-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -529,7 +550,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.davdima.Messages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Messages/Messages-Swift.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Messages/Messages-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Messages-Swift.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

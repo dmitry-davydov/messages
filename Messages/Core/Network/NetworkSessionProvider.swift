@@ -36,6 +36,9 @@ final class NetworkSessionProvider {
     func request<T: Decodable>(_ type: T.Type, endpoint: NetworkEndpoint, callbackQueue: DispatchQueue, completion: @escaping (Swift.Result<T, Network.Error>) -> Void) {
         
         let decoder = JSONDecoder()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss+SSS"
+        decoder.dateDecodingStrategy = .formatted(dateFormatter)
         
         let dataRequest = session.request(endpoint)
             .validate()
@@ -64,8 +67,10 @@ final class NetworkSessionProvider {
             switch afError {
             case .sessionTaskFailed(let urlError as URLError):
                 switch urlError.code {
-                case .notConnectedToInternet, .timedOut:
+                case .notConnectedToInternet:
                     completion(.failure(.noInternetConnection))
+                case .timedOut:
+                    completion(.failure(.timeout))
                 default:
                     completion(.failure(.unknown))
                 }
@@ -76,10 +81,6 @@ final class NetworkSessionProvider {
                 
             case .responseValidationFailed:
                 switch dataResponse.response?.statusCode {
-                case 400:
-                    completion(.failure(.badRequest))
-                case 404:
-                    completion(.failure(.notFound))
                 default:
                     completion(.failure(.unknown))
                 }

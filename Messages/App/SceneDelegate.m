@@ -6,7 +6,8 @@
 //
 
 #import "SceneDelegate.h"
-#import "MessagesListViewController.h"
+#import "MessageListViewController.h"
+#import "MessageListAssembly.h"
 
 @interface SceneDelegate ()
 
@@ -20,8 +21,20 @@
     self.window = [[UIWindow alloc] initWithFrame:frame];
     [self.window makeKeyAndVisible];
     
-    MessagesListViewController *rootViewController = [[MessagesListViewController alloc] init];
-    self.window.rootViewController = rootViewController;
+    MessageListViewController *rootViewController = [MessageListAssembly assembly];
+    
+    
+    UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    
+    UIColor* barColor = [[UIColor alloc] initWithRed:0.973 green:0.973 blue:0.973 alpha:0.92];
+    UIView* statusBarView = [[UIView alloc]initWithFrame:[UIApplication sharedApplication].statusBarFrame];
+    statusBarView.backgroundColor = barColor;
+    
+    [navigationController.view addSubview:statusBarView];
+    navigationController.navigationBar.prefersLargeTitles = YES;
+    [navigationController.navigationBar setBackgroundColor:barColor];
+    
+    self.window.rootViewController = navigationController;
     
     UIWindowScene *windowScene = (UIWindowScene *) scene;
     [self.window setWindowScene: windowScene];

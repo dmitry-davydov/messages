@@ -11,10 +11,24 @@ enum Network {
     enum Error: LocalizedError, Equatable {
         case unknown
         case responseSerialization
-        case notFound
-        case conflict
-        case gone
-        case badRequest
         case noInternetConnection
+        case timeout
+        
+        var asWrappedError: NetworkErrorWrapper {
+            switch self {
+            case .unknown: return .unknown
+            case .responseSerialization: return .responseSerialization
+            case .timeout: return .timeout
+            case .noInternetConnection: return .noInternetConnection
+            }
+        }
     }
 }
+
+@objc enum NetworkErrorWrapper: NSInteger {
+    case unknown
+    case responseSerialization
+    case noInternetConnection
+    case timeout
+}
+

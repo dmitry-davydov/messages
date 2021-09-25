@@ -8,19 +8,19 @@
 import Foundation
 
 protocol MessagesManagerProtocol {
-    func fetchList(completion: @escaping(_ result: Result<[MessageItem], Network.Error>) -> Void)
+    func fetchList(on success: @escaping(_ result: [MessageItem]) -> Void, onError: @escaping(_ error: NetworkErrorWrapper) -> Void)
 }
 
 @objc final class MessagesManager: NSObject, MessagesManagerProtocol {
     private let sessionProvider: NetworkSessionProvider = NetworkSessionProvider.shared
     
-    func fetchList(completion: @escaping(_ result: Result<[MessageItem], Network.Error>) -> Void) {
+    @objc func fetchList(on success: @escaping(_ result: [MessageItem]) -> Void, onError: @escaping(_ error: NetworkErrorWrapper) -> Void) {
         sessionProvider.request([MessageItem].self, endpoint: MessagesEndpoint.messagesList, callbackQueue: .main) { result in
             switch result {
             case .success(let messagesItemList):
-                completion(.success(messagesItemList))
+                success(messagesItemList)
             case .failure(let error):
-                completion(.failure(error))
+                onError(error.asWrappedError)
             }
         }
     }

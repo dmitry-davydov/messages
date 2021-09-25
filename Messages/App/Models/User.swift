@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct User: Codable {
-    let nickname: String
-    let avatarUrl: String
+@objc class User: NSObject, Codable {
+    @objc let nickname: String
+    @objc let avatarUrl: String
     
     enum CodingKeys: String, CodingKey {
         case nickname

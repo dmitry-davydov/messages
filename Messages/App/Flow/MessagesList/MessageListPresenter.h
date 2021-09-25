@@ -6,27 +6,28 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Messages-Swift.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class MessagesManager;
+//@class MessagesManager;
 
 @protocol MessagesListViewInput
- 
--(void)showNoResults;
--(void)hideNoResults;
-
+- (void)showNoResults;
+- (void)hideNoResults;
+- (void)loadingIndicator:(BOOL)isEnabled;
+- (void)endRefreshing;
+- (void)presentAlert:(NSString*)text;
+- (void)showResults:(NSArray*)messagesItemList;
 @end
 
 @protocol MessagesListViewOutput
--(void)requestMessages;
+- (void)requestMessages:(BOOL)fromRefreshControl;
 @end
 
-@interface MessageListPresenter : NSObject
+@interface MessageListPresenter : NSObject <MessagesListViewOutput>
 @property(nonatomic, weak) NSObject<MessagesListViewInput> *viewInput;
-@property(nonatomic, strong) MessagesManager *messagesManager;
-
--(instancetype) initWith:(MessagesManager*)messageManager;
+- (instancetype) initWith:(MessagesManager*)messageManager;
 @end
 
 
