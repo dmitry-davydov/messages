@@ -37,6 +37,28 @@
                             placeholderImage:[UIImage imageNamed:@"userImagePlaceholder"]];
     self.usernameLabel.text = messageItem.user.nickname;
     self.messageLabel.text = messageItem.message.text;
+    [self.messageLabel sizeToFit];
+    self.dateLabel.text = [self formatDate:messageItem.message.receivedAt];
+}
+
+- (NSString*) formatDate:(NSDate*)date {
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    BOOL isToday = [[NSCalendar currentCalendar] isDateInToday:date];
+    if (isToday) {
+        [dateFormatter setDateFormat:@"HH:mm"];
+        
+        return [dateFormatter stringFromDate:date];
+    }
+    
+    BOOL isYesterday = [[NSCalendar currentCalendar] isDateInYesterday:date];
+    if (isYesterday) {
+        return @"Yesterday";
+    }
+    
+    [dateFormatter setDateFormat:@"dd.MM.yyyy"];
+    return [dateFormatter stringFromDate:date];
 }
 
 @end

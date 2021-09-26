@@ -37,7 +37,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yesterday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9e-yb-lxa">
                                 <rect key="frame" x="138" y="0.0" width="68" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <color key="textColor" red="0.54902499910000002" green="0.54901266100000001" blue="0.54901510480000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VLR-KH-zcf">
@@ -55,11 +55,18 @@
                         </constraints>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jared's been back from that island for a whole day and he didn't get any toilet…" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZm-Yt-6cp">
-                        <rect key="frame" x="83" y="31" width="222" height="35"/>
+                        <rect key="frame" x="83" y="31" width="222" height="33.5"/>
                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                        <color key="textColor" systemColor="systemGray2Color"/>
+                        <color key="textColor" red="0.54902499910000002" green="0.54901266100000001" blue="0.54901510480000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01C-vO-ayB">
+                        <rect key="frame" x="28" y="75" width="292" height="1"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20446918815966472" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Tht-KE-zR2"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="lUt-qY-2J2" secondAttribute="trailing" constant="12" id="56c-JT-eAm"/>
@@ -67,14 +74,16 @@
                     <constraint firstItem="HZm-Yt-6cp" firstAttribute="leading" secondItem="8dc-eS-eNu" secondAttribute="trailing" constant="12" id="D2Q-FB-2pa"/>
                     <constraint firstItem="8dc-eS-eNu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="F38-DN-OgC"/>
                     <constraint firstItem="8dc-eS-eNu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="26" id="FtJ-Ve-8j9"/>
+                    <constraint firstAttribute="bottom" secondItem="01C-vO-ayB" secondAttribute="bottom" id="Xme-ub-VVj"/>
+                    <constraint firstAttribute="trailing" secondItem="01C-vO-ayB" secondAttribute="trailing" id="bYe-gK-pbk"/>
                     <constraint firstItem="HZm-Yt-6cp" firstAttribute="top" secondItem="lUt-qY-2J2" secondAttribute="bottom" constant="2" id="f5E-YQ-OsS"/>
                     <constraint firstItem="lUt-qY-2J2" firstAttribute="leading" secondItem="8dc-eS-eNu" secondAttribute="trailing" constant="15" id="hWd-wG-k1e"/>
                     <constraint firstItem="lUt-qY-2J2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="lOz-B0-wdo"/>
-                    <constraint firstAttribute="bottom" secondItem="HZm-Yt-6cp" secondAttribute="bottom" constant="10" id="lp0-ks-tof"/>
+                    <constraint firstItem="01C-vO-ayB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="28" id="uvA-fn-s3j"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
-            <inset key="separatorInset" minX="28" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="avatarImageView" destination="8dc-eS-eNu" id="iTH-p9-ATP"/>
                 <outlet property="dateLabel" destination="z9e-yb-lxa" id="fdx-DU-b89"/>

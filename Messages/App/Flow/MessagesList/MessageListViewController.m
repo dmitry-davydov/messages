@@ -46,6 +46,9 @@
     [self.tableView registerNib:nib forCellReuseIdentifier:@"cell"];
     self.tableView.refreshControl = [[UIRefreshControl alloc] init];
     [self.tableView.refreshControl addTarget:self action:@selector(onUpdateWithRefreshControl) forControlEvents: UIControlEventValueChanged];
+    
+    [self.tableView setContentInset:UIEdgeInsetsMake(15, 0, 0, 0)];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableView];
     
     [self configureNoResultsView];
@@ -153,6 +156,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 76;
 }
 
 // MARK: Actions
